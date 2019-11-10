@@ -1,3 +1,43 @@
 body {
   background-color: #212121;
+  color: antiquewhite;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin: 30px;
+}
+
+p {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.tekst {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.naziv {
+  text-align: center;
+}
+
+.naziv,
+.karakteri {
+  font-family: "Mountains of Christmas", cursive;
+}
+
+.orange {
+  color: rgb(255, 177, 31);
+}
+
+.karakteri img {
+  height: 250px;
+}
+
+.karakteri p {
+  text-align: center;
+  font-size: 25px;
+}
+
+.imena {
+  margin-top: 20px;
 }
