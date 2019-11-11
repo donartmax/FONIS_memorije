@@ -1,0 +1,160 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+}
+
+.memory-game {
+  width: 1500px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: 300px;
+  height: calc(50% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #1C7CCC;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* 
+body {
+  height: 100vh;
+  display: flex;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(66,60,60,1) 46%, rgba(177,134,78,1) 76%, rgba(237,142,8,1) 100%);
+} */
+/* 
+img {
+  height: 100%;
+} */
+
+.memory-game {
+  width: 1240px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+.memory-card img {
+  height: 100% !important;
+}
+.memory-card {
+  width: 300px;
+  height: calc(50% - 10px);
+  /* height: 100%; */
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+.nastavi-btn {
+  padding: 10px 30px 10px 30px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: rgba(235, 120, 13, 0.774);
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+#over {
+  height: 640px;
+  width: 1240px;
+  background-color: rgba(235, 120, 13, 0.874);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  display: none;
+}
+#over p {
+  font-size: 100px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1240px) {
+  .memory-card {
+    width: 23.3%;
+  }
+  .memory-game {
+    width: 700px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .memory-card {
+    width: 48%;
+  }
+}
